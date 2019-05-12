@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+</head>
+<body>
+    
+    <div class="container">
+            <label>Registro</label>
+            
+            <label>Nombre</label>
+            <input  class="form-control" id="Nombre">
+           
+            <label>Apellido</label>
+            <input  class="form-control" id="Apellido">
+           
+            <label>Correo</label>
+            <input  class="form-control" id="Correo">
+
+            <label>Posicion Favorita</label>
+            <div>
+
+                <label class="radio-inline" ><input type="radio" name="PosicionF" value="4" checked>Posicion 4</label>
+                <label class="radio-inline" ><input type="radio" name="PosicionF" value="3">Posicion 3</label>
+                <label class="radio-inline" ><input type="radio" name="PosicionF" value="2">Posicion 2</label>
+            </div>
+            <div>
+
+                <label class="radio-inline" ><input type="radio" name="PosicionF" value="5">Posicion 5</label>
+                <label class="radio-inline" ><input type="radio" name="PosicionF" value="6">Posicion 6</label>
+                <label class="radio-inline" ><input type="radio" name="PosicionF" value="1">Posicion 1</label>
+            </div>
+
+            <label>Nombre de Usuario</label>
+            <input  class="form-control" id="Usuario">
+
+            <label>Contraseña</label>
+            <input  class="form-control" id="Contraseña">
+           
+    
+            <button class="btn btn-primary" onclick="registrar()">Registrar</button>
+    </div>
+<!--  FIREBASE  -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#config-web-app -->
+        <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyCe62hKEYKDdw2lcExx8AeouoPApZzaycI",
+        authDomain: "voleynow-d6c67.firebaseapp.com",
+        databaseURL: "https://voleynow-d6c67.firebaseio.com",
+        projectId: "voleynow-d6c67",
+        storageBucket: "voleynow-d6c67.appspot.com",
+        messagingSenderId: "310064294630",
+        appId: "1:310064294630:web:e7d136e1cb92a9e4"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>
+<!--   BOORSTRAP -->    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+<script src="js/registro.js"></script>
+</body>
+</html>
