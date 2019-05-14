@@ -9,36 +9,27 @@ function registrar(){
     var verificar = validarnull(nombre,apellido,correo,usuario,contraseña);
 
     if(verificar == true){
-
         var ref = firebase.database().ref('Usuarios/'+usuario);
-        var Boolver =  true;
         ref.once('value')
            .then(function(snapshot) {
-            var ver = snapshot.child("Contraseña").val();
-            
-            if(ver != null){
-                Boolver = false;
-            }
+               try{
+                    var ver = snapshot.val().contraseña;
+
+                    window.alert("Nombre de usuario en uso");
+                    document.getElementById("Usuario").classList.add("alert-danger");
+                }
+               catch{
+                        
+                    var setRegister = firebase.database().ref('Usuarios');
+                    setRegister.child(usuario).set({
+                    Apellido : apellido,
+                    Contraseña : contraseña,
+                    Correo : correo,
+                    Nombre : nombre,
+                    Posicion : posicionF
+                    });
+                }
         });
-
-
-        console.log(Boolean);
-        if(Boolver == true){
-
-            var setRegister = firebase.database().ref('Usuarios');
-            setRegister.child(usuario).set({
-                Apellido : apellido,
-                Contraseña : contraseña,
-                Correo : correo,
-                Nombre : nombre,
-                Posicion : posicionF
-            });
-        }
-        else{
-            window.alert("Nombre de usuario en uso");
-            document.getElementById("Usuario").classList.add("alert-danger");
-
-        }
     }
 }
 
