@@ -19,7 +19,8 @@ function init() {
     var entrar = document.getElementById("entrar");
     entrar.addEventListener('click', function(){
         inicio();
-
+      
+    });  
 
     var crearEvento = document.getElementById("crearEvento");
     crearEvento.addEventListener('click', function(){
