@@ -59,6 +59,33 @@
             <button class="btn btn-primary" id="registroBackButton">Iniciar sesion</button>
     </section>
 
+    <section class="crearEvento" id="nuevoEvento">
+            <label>Crear Evento</label>
+            
+            <label>Hora</label>
+            <input  type="time" id="Hora">
+           
+            <label>Fecha</label> <br>
+            <input  type="date" id="Calendario">
+           <br>
+            <label>Lugar</label>
+            <input  class="form-control" id="Lugar">
+
+            <label>Descripción</label>
+            <input  class="form-control" id="Descripcion">
+
+            <label>Puntualidad minima de jugadores</label>
+            <select class="form-control" id="Puntualidad">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <button class="btn btn-primary" id="crearEvento">Crear Evento</button>
+
+
+    </section>
 
 <!--  FIREBASE  -->
     <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -97,5 +124,6 @@
 <script type="text/JavaScript" src="js/validarPass.js"></script>
 <script type="text/JavaScript" src="js/main.js"></script>
 <script type="text/JavaScript" src="js/registro.js"></script>
+<script type="text/JavaScript" src="js/crearEvento.js"></script>
 </body>
 </html>
