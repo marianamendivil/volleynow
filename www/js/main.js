@@ -16,6 +16,11 @@ function init() {
         registrar();
     });
 
+    var entrar = document.getElementById("entrar");
+    entrar.addEventListener('click', function(){
+        inicio();
+    });
+
     var registroBackButton = document.getElementById("registroBackButton");
     registroBackButton.addEventListener('click', navigate('registrop', 'initialp'));
 }
