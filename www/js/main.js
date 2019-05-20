@@ -16,6 +16,13 @@ function init() {
         registrar();
     });
 
+
+
+    var crearEvento = document.getElementById("crearEvento");
+    crearEvento.addEventListener('click', function(){
+        crearevento();
+    });
+
     var registroBackButton = document.getElementById("registroBackButton");
     registroBackButton.addEventListener('click', navigate('registrop', 'initialp'));
 }
