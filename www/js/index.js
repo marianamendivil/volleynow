@@ -10,7 +10,7 @@ function inicio(){
                 try{    
                 var contraseña = snapshot.val().Contraseña;
                 var result = JSON.stringify(Contraseña).localeCompare(JSON.stringify(contraseña));
-                console.log(result);
+
                 if( result == 0){
                     window.alert("usuario y contraseña correcta");
                 }
