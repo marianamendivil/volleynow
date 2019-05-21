@@ -18,21 +18,19 @@ function init() {
 
     var entrar = document.getElementById("entrar");
     entrar.addEventListener('click', function(){
-        inicio();
-      
+        validar();
     });  
 
     var crearEvento = document.getElementById("crearEvento");
     crearEvento.addEventListener('click', function(){
         crearevento();
-
     });
 
     var registroBackButton = document.getElementById("registroBackButton");
     registroBackButton.addEventListener('click', navigate('registrop', 'initialp'));
 }
 
-var navigate = function(actual, next) {
+function navigate(actual, next) {
     return function() {
         hide(actual);
         show(next);
@@ -45,4 +43,18 @@ function show (id) {
 
 function hide (id) {
     document.getElementById(id).style.display = "none";
+
+}
+
+//SIDEBAR
+/* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
 }

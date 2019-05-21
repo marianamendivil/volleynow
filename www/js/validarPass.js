@@ -1,4 +1,4 @@
-function inicio(){
+function validar(){
     var  Usuario = document.getElementById("user").value;
     var Contraseña = document.getElementById("pwd").value;
     
@@ -7,19 +7,19 @@ function inicio(){
        if(Contraseña!=""){
             ref.once('value')
             .then(function(snapshot) {
-                try{    
+                try{
                 var contraseña = snapshot.val().Contraseña;
                 var result = JSON.stringify(Contraseña).localeCompare(JSON.stringify(contraseña));
 
-                if( result == 0){
-                    window.alert("usuario y contraseña correcta");
+                if(result == 0){
+                    //window.alert("usuario y contraseña correcta");
+                    navigate('initialp','eventosp')();
                 }
                 else{
                     window.alert("usuario y contraseña incorrecta");
                 }
                 }catch{
                     window.alert("usuario y contraseña incorrecta");
-                
                 }
                 });
         }else{
@@ -28,5 +28,4 @@ function inicio(){
     }else{
         document.getElementById("user").classList.add("alert-danger");
     }
-
 }

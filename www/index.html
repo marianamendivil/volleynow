@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <title>Voleynow</title>
@@ -19,7 +21,7 @@
             <input type="text" class="form-control" id="user">
             <label>contraseña:</label>
             <input type="password" class="form-control" id="pwd">
-            <button class="btn btn-primary" id="entrar" >Entrar</button>
+            <button class="btn btn-primary" id=entrar>Entrar</button>
             <button class="btn btn-primary" id="registroButton">Registrarse</button>
     </section>
 
@@ -58,7 +60,36 @@
             <button class="btn btn-primary" id="registrarse">Registrar</button>
             <button class="btn btn-primary" id="registroBackButton">Iniciar sesion</button>
     </section>
+    <section class="eventos" id="eventosp">
+        <h1>Eventos</h1>
+        <div id="mySidebar" class="sidebar">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="#">Crear evento</a>
+          <a href="#">Perfil</a>
+          <a href="#">Mis eventos</a>
+          <a href="#">Salir (logout)</a>
+        </div>
 
+        <div id="main">
+          <button class="openbtn" id="tresLineas" onclick="openNav()">&#9776;</button> 
+        </div>
+
+        <div class="card">
+          <div class="container">
+            <h2>Creador: </h2> 
+            <h2>Lugar: </h2>
+            <h2>Fecha: </h2>
+            <h2>Hora: </h2> 
+            <button class="btn btn-primary">Participar</button>
+            <h2>Cupos: /12</h2>
+          </div>
+        </div>
+    </section>
+
+    <!-- <section class="participar" id="participarp"></section>
+
+    <section class="perfil" id="perfilp"></section> -->
+  
     <section class="crearEvento" id="nuevoEvento">
             <label>Crear Evento</label>
             
@@ -83,8 +114,6 @@
                 <option>5</option>
             </select>
             <button class="btn btn-primary" id="crearEvento">Crear Evento</button>
-
-
     </section>
 
 <!--  FIREBASE  -->
@@ -111,8 +140,6 @@
     firebase.initializeApp(firebaseConfig);
     </script>
 <!--   BOORSTRAP -->    
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
@@ -120,9 +147,8 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-
-<script type="text/JavaScript" src="js/validarPass.js"></script>
 <script type="text/JavaScript" src="js/main.js"></script>
+<script type="text/JavaScript" src="js/validarPass.js"></script>
 <script type="text/JavaScript" src="js/registro.js"></script>
 <script type="text/JavaScript" src="js/crearEvento.js"></script>
 </body>

@@ -1,5 +1,4 @@
 function registrar(){
-
     var nombre = document.getElementById("Nombre").value;
     var apellido= document.getElementById("Apellido").value;
     var correo= document.getElementById("Correo").value;
