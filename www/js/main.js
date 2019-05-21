@@ -28,7 +28,7 @@ function init() {
     crearEventoBtn.addEventListener('click', navigate('eventosp', 'nuevoEvento'));
 
     var perfilBtn = document.getElementById("perfilBtn");
-    perfilBtn.addEventListener('click', navigate('eventosp', 'perfilp'));
+    perfilBtn.addEventListener('click', function(){navigate('eventosp', 'perfilp')();showperfil()});
 
     var perfilBackButton = document.getElementById("perfilBackButton");
     perfilBackButton.addEventListener('click', navigate('perfilp','eventosp'))
@@ -39,6 +39,7 @@ function init() {
     registrarse.addEventListener('click', function(){
         registrar();
     });
+  
 }
 
 function navigate(actual, next) {
