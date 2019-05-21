@@ -20,7 +20,6 @@ function validar(){
                 }
                 }catch{
                     window.alert("usuario y contraseña incorrecta");
-                
                 }
                 });
         }else{

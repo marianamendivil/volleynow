@@ -19,6 +19,11 @@ function init() {
     var entrar = document.getElementById("entrar");
     entrar.addEventListener('click', function(){
         validar();
+    });  
+
+    var crearEvento = document.getElementById("crearEvento");
+    crearEvento.addEventListener('click', function(){
+        crearevento();
     });
 
     var registroBackButton = document.getElementById("registroBackButton");
