@@ -25,7 +25,7 @@ function init() {
     registroBackButton.addEventListener('click', navigate('registrop', 'initialp'));
 }
 
-var navigate = function(actual, next) {
+function navigate(actual, next) {
     return function() {
         hide(actual);
         show(next);
@@ -38,6 +38,7 @@ function show (id) {
 
 function hide (id) {
     document.getElementById(id).style.display = "none";
+
 }
 
 //SIDEBAR
