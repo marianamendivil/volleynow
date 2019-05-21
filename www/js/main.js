@@ -11,11 +11,6 @@ function init() {
     var registroButton = document.getElementById("registroButton");
     registroButton.addEventListener('click', navigate('initialp', 'registrop'));
 
-    var registrarse = document.getElementById("registrarse");
-    registrarse.addEventListener('click', function(){
-        registrar();
-    });
-
     var entrar = document.getElementById("entrar");
     entrar.addEventListener('click', function(){
         validar();
@@ -24,10 +19,24 @@ function init() {
     var crearEvento = document.getElementById("crearEvento");
     crearEvento.addEventListener('click', function(){
         crearevento();
+        navigate('nuevoEvento','eventosp')();
     });
 
     var registroBackButton = document.getElementById("registroBackButton");
     registroBackButton.addEventListener('click', navigate('registrop', 'initialp'));
+
+    var crearEventoBtn = document.getElementById("crearEventoBtn");
+    crearEventoBtn.addEventListener('click', navigate('eventosp', 'nuevoEvento'));
+
+    var perfilBtn = document.getElementById("perfilBtn");
+    perfilBtn.addEventListener('click', navigate('eventosp', 'perfilp'));
+
+    //FUNCIONALIDAD
+
+    var registrarse = document.getElementById("registrarse");
+    registrarse.addEventListener('click', function(){
+        registrar();
+    });
 }
 
 function navigate(actual, next) {

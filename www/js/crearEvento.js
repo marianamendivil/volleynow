@@ -1,4 +1,3 @@
-
 function crearevento(){
     var usuario= document.getElementById("user").value;
     var Hora = document.getElementById("Hora").value;
@@ -19,10 +18,7 @@ function crearevento(){
         Cupos : "12",
         Descripcion :  Descripcion,
         Puntualidad : Puntualidad
-
         });
-
-
     }
 }
 
@@ -33,7 +29,7 @@ function validarnulos(Hora,Calendario,Lugar,Descripcion,Puntualidad){
         ver = 1;
     }
     if(Calendario==""){
-        window.alert("Seleccione una fehca en el calendario")
+        window.alert("Seleccione una fehca en el calendario");
         ver = 1;
     }
     if(Lugar==""){

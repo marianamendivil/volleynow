@@ -64,8 +64,8 @@
         <h1>Eventos</h1>
         <div id="mySidebar" class="sidebar">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <a href="#">Crear evento</a>
-          <a href="#">Perfil</a>
+          <a href="javascript:void(0)" id="crearEventoBtn">Crear evento</a>
+          <a href="javascript:void(0)" id="perfilBtn">Perfil</a>
           <a href="#">Mis eventos</a>
           <a href="#">Salir (logout)</a>
         </div>
@@ -85,10 +85,6 @@
           </div>
         </div>
     </section>
-
-    <!-- <section class="participar" id="participarp"></section>
-
-    <section class="perfil" id="perfilp"></section> -->
   
     <section class="crearEvento" id="nuevoEvento">
             <label>Crear Evento</label>
@@ -115,6 +111,12 @@
             </select>
             <button class="btn btn-primary" id="crearEvento">Crear Evento</button>
     </section>
+
+    <!-- <section class="participar" id="participarp"></section>-->
+
+    <section class="perfil" id="perfilp"></section>
+
+<!--//////////////////////////////////////////////////////////////////////////////////////////-->
 
 <!--  FIREBASE  -->
     <!-- The core Firebase JS SDK is always required and must be listed first -->
