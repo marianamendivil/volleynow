@@ -19,6 +19,7 @@ function crearevento(){
         Descripcion :  Descripcion,
         Puntualidad : Puntualidad
         });
+        navigate('nuevoEvento','eventosp')();
     }
 }
 
@@ -37,7 +38,7 @@ function validarnulos(Hora,Calendario,Lugar,Descripcion,Puntualidad){
         ver = 1;
     }
     if(Descripcion==""){
-        document.getElementById("Descipcion").classList.add("alert-danger");
+        document.getElementById("Descripcion").classList.add("alert-danger");
         ver = 1;
     }
     if(Puntualidad==""){

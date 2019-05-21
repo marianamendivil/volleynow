@@ -19,7 +19,6 @@ function init() {
     var crearEvento = document.getElementById("crearEvento");
     crearEvento.addEventListener('click', function(){
         crearevento();
-        navigate('nuevoEvento','eventosp')();
     });
 
     var registroBackButton = document.getElementById("registroBackButton");
@@ -30,6 +29,9 @@ function init() {
 
     var perfilBtn = document.getElementById("perfilBtn");
     perfilBtn.addEventListener('click', navigate('eventosp', 'perfilp'));
+
+    var perfilBackButton = document.getElementById("perfilBackButton");
+    perfilBackButton.addEventListener('click', navigate('perfilp','eventosp'))
 
     //FUNCIONALIDAD
 
