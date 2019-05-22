@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -66,7 +67,7 @@
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
           <a href="javascript:void(0)" id="crearEventoBtn">Crear evento</a>
           <a href="javascript:void(0)" id="perfilBtn">Perfil</a>
-          <a href="#">Mis eventos</a>
+          <a href="javascript:void(0)" id="misEventosBtn">Mis eventos</a>
           <a href="#">Salir (logout)</a>
         </div>
 
@@ -74,15 +75,8 @@
           <button class="openbtn" id="tresLineas" onclick="openNav()">&#9776;</button> 
         </div>
 
-        <div class="card">
-          <div class="container">
-            <h2>Creador: </h2> 
-            <h2>Lugar: </h2>
-            <h2>Fecha: </h2>
-            <h2>Hora: </h2> 
-            <button class="btn btn-primary">Participar</button>
-            <h2>Cupos: /12</h2>
-          </div>
+        <div id="cardeventop">
+          
         </div>
     </section>
   
@@ -115,7 +109,34 @@
     <!-- <section class="participar" id="participarp"></section>-->
 
     <section class="perfil" id="perfilp">
+        
         <button id="perfilBackButton">Back</button>
+        <div class="card" style="width:400px">
+            <img class="card-img-top" src="img/img_avatar3.png" alt="Card image" style="width:100%">
+            
+            <div class="card-body">
+                <h4 class="card-title" id="nombreApellido">John Doe</h4>
+                <br>
+                <h4 class="card-title" id="usuarioperfil">John Doe</h4>
+                <p class="card-text" id="correoperfil">aaaa@upb</p>
+                <p class="card-text" id="posicionperfil">aaaa@upb</p>
+                
+                <span class="fa fa-star" id="star1"></span>
+                <span class="fa fa-star" id="star2"></span>
+                <span class="fa fa-star" id="star3"></span>
+                <span class="fa fa-star" id="star4"></span>
+                <span class="fa fa-star" id="star5"></span>
+            </div>
+        </div>
+    </section>
+
+    <section class="misEventos" id="misEventosP">
+        <button id="misEventosBackButton">Back</button>
+        <div id="adminEventosp">
+            
+        </div>
+
+
     </section>
 
 <!--//////////////////////////////////////////////////////////////////////////////////////////-->
@@ -155,5 +176,8 @@
 <script type="text/JavaScript" src="js/validarPass.js"></script>
 <script type="text/JavaScript" src="js/registro.js"></script>
 <script type="text/JavaScript" src="js/crearEvento.js"></script>
+<script type="text/JavaScript" src="js/perfil.js"></script>
+<script type="text/JavaScript" src="js/misEventos.js"></script>
+<script type="text/JavaScript" src="js/cardsEvento.js"></script>
 </body>
 </html>

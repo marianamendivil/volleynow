@@ -25,7 +25,8 @@ function registrar(){
                     Contraseña : contraseña,
                     Correo : correo,
                     Nombre : nombre,
-                    Posicion : posicionF
+                    Posicion : posicionF,
+                    Puntualidad : 3
                     });
                 }
         });

@@ -113,3 +113,6 @@ section {
 .container {
   	padding: 2px 16px;
 }
+.checked {
+  color: orange;
+}
