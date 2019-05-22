@@ -14,6 +14,7 @@ function validar(){
                 if(result == 0){
                     //window.alert("usuario y contraseña correcta");
                     navigate('initialp','eventosp')();
+                    
                 }
                 else{
                     window.alert("usuario y contraseña incorrecta");

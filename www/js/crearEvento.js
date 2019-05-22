@@ -6,20 +6,27 @@ function crearevento(){
     var Descripcion= document.getElementById("Descripcion").value;
     var Puntualidad= document.getElementById("Puntualidad").value;
     var validar = validarnulos(Hora,Calendario,Lugar,Descripcion,Puntualidad);
+  
     
+
     if(validar == 0){
-        var ref = firebase.database().ref('Eventos/');
-        var newPostRef = ref.push();
-        newPostRef.set({
-        Usuario : usuario,
-        Lugar :  Lugar,
-        Hora : Hora,
-        Calendario : Calendario,
-        Cupos : "12",
-        Descripcion :  Descripcion,
-        Puntualidad : Puntualidad
-        });
-        navigate('nuevoEvento','eventosp')();
+
+
+        if(validar == 0){
+            var ref = firebase.database().ref('Eventos/');
+            var newPostRef = ref.push();
+            newPostRef.set({
+            Usuario : usuario,
+            Lugar :  Lugar,
+            Hora : Hora,
+            Calendario : Calendario,
+            Cupos : "12",
+            Descripcion :  Descripcion,
+            Puntualidad : Puntualidad,
+            Jugador: {Jugar1: jugador1 , jugar2 : Jugador2}
+            });
+            navigate('nuevoEvento','eventosp')();
+        }
     }
 }
 
@@ -46,4 +53,5 @@ function validarnulos(Hora,Calendario,Lugar,Descripcion,Puntualidad){
         ver = 1;
     }
     return ver;
+
 }

@@ -14,6 +14,7 @@ function init() {
     var entrar = document.getElementById("entrar");
     entrar.addEventListener('click', function(){
         validar();
+        cardsEventos();
     });  
 
     var crearEvento = document.getElementById("crearEvento");
@@ -31,7 +32,13 @@ function init() {
     perfilBtn.addEventListener('click', function(){navigate('eventosp', 'perfilp')();showperfil()});
 
     var perfilBackButton = document.getElementById("perfilBackButton");
-    perfilBackButton.addEventListener('click', navigate('perfilp','eventosp'))
+    perfilBackButton.addEventListener('click', navigate('perfilp','eventosp'));
+
+    var misEventosBtn = document.getElementById("misEventosBtn");
+    misEventosBtn.addEventListener('click', function(){navigate('eventosp', 'misEventosP')();listaMisEventos()});
+
+    var misEventosBackButton = document.getElementById("misEventosBackButton");
+    misEventosBackButton.addEventListener('click', navigate('misEventosP','eventosp'));
 
     //FUNCIONALIDAD
 

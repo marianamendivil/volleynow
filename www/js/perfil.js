@@ -14,7 +14,6 @@ function showperfil(){
             document.getElementById("star"+i).classList.add("checked");
         }
         });
-   
 
-
+        
 }

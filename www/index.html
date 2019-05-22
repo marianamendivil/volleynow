@@ -67,7 +67,7 @@
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
           <a href="javascript:void(0)" id="crearEventoBtn">Crear evento</a>
           <a href="javascript:void(0)" id="perfilBtn">Perfil</a>
-          <a href="#">Mis eventos</a>
+          <a href="javascript:void(0)" id="misEventosBtn">Mis eventos</a>
           <a href="#">Salir (logout)</a>
         </div>
 
@@ -75,15 +75,8 @@
           <button class="openbtn" id="tresLineas" onclick="openNav()">&#9776;</button> 
         </div>
 
-        <div class="card">
-          <div class="container">
-            <h2>Creador: </h2> 
-            <h2>Lugar: </h2>
-            <h2>Fecha: </h2>
-            <h2>Hora: </h2> 
-            <button class="btn btn-primary">Participar</button>
-            <h2>Cupos: /12</h2>
-          </div>
+        <div id="cardeventop">
+          
         </div>
     </section>
   
@@ -135,9 +128,13 @@
                 <span class="fa fa-star" id="star5"></span>
             </div>
         </div>
-        
-          
-         
+    </section>
+
+    <section class="misEventos" id="misEventosP">
+        <button id="misEventosBackButton">Back</button>
+        <div id="adminEventosp">
+            
+        </div>
 
 
     </section>
@@ -180,5 +177,7 @@
 <script type="text/JavaScript" src="js/registro.js"></script>
 <script type="text/JavaScript" src="js/crearEvento.js"></script>
 <script type="text/JavaScript" src="js/perfil.js"></script>
+<script type="text/JavaScript" src="js/misEventos.js"></script>
+<script type="text/JavaScript" src="js/cardsEvento.js"></script>
 </body>
 </html>
