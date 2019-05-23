@@ -105,7 +105,7 @@ function participar(id1){
    
     ref3.once('value')
        .then(function(snapshot) {
-        document.getElementById("traerdescrip").innerHTML += snapshot.child("Descripcion").val();
+        document.getElementById("traerdescrip").innerHTML = snapshot.child("Descripcion").val();
         
         });
     
@@ -172,10 +172,6 @@ function aceptar(){
    
    
     var ref = firebase.database().ref('Eventos/'+id+'/Jugador');
-<<<<<<< HEAD
-    ref.update({
-        '' : usuario
-=======
     ref.once("value")
       .then(function(snapshot) {
         var a = snapshot.child("Jugador1").exists();
@@ -404,5 +400,4 @@ function aceptar(){
     });
    
     navigate('participarp', 'eventosp')();
-    cardsEventos();
 }
