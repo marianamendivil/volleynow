@@ -33,6 +33,10 @@ section {
 	background-size: cover;
 }
 
+#claveOculta {
+  display: none;
+}
+
 #cancha {
   background-image: url("../img/cancha.png");
   background-position: center;

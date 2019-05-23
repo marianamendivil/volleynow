@@ -88,9 +88,23 @@ function puntoPressed(id) {
     var elemento = document.getElementById(id);
     if (elemento.className.split(' ').length < 2) {
         elemento.className+=' selected';
-        console.log("algo");
     }
     else {
         elemento.className = 'punto';
     }
+}
+
+function participar(id1){
+    console.log(id1);  
+    document.getElementById('claveOculta').innerHTML = id1;  
+}
+
+function aceptar(){
+    var id = document.getElementById('claveOculta').innerHTML;
+    var usuario = document.getElementById('user').value;
+    var ref = firebase.database().ref('Eventos/'+id+'/Jugador');
+    ref.update({
+        ''+ : usuario
+    });
+    navigate('participarp', 'eventosp')();
 }
