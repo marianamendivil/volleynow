@@ -88,7 +88,7 @@ function closeNav() {
   document.getElementById("main").style.marginLeft = "0";
 }
 
-function puntoPressed(id) {
+/*function puntoPressed(id) {
     var elemento = document.getElementById(id);
     if (elemento.className.split(' ').length < 2) {
         elemento.className+=' selected';
@@ -97,18 +97,312 @@ function puntoPressed(id) {
         elemento.className = 'punto';
     }
 }
-
+*/
 function participar(id1){
     console.log(id1);  
-    document.getElementById('claveOculta').innerHTML = id1;  
+    document.getElementById('claveOculta').innerHTML = id1;
+    var ref3 = firebase.database().ref('Eventos/'+id1);
+   
+    ref3.once('value')
+       .then(function(snapshot) {
+        document.getElementById("traerdescrip").innerHTML += snapshot.child("Descripcion").val();
+        
+        });
+    
+    var ref = firebase.database().ref('Eventos/'+id1+'/Jugador');
+   
+    ref.once('value')
+       .then(function(snapshot) {
+           
+        var a = snapshot.child("Jugador1").val();
+        if(a != null){
+            document.getElementById("p1").className+=' selected';
+        }
+        var b = snapshot.child("Jugador2").val();
+        if(b != null){
+            document.getElementById("p2").className+=' selected';
+        }
+        var c = snapshot.child("Jugador3").val();
+        if(c != null){
+            document.getElementById("p3").className+=' selected';
+        }
+        var d = snapshot.child("Jugador4").val();
+        if(d != null){
+            document.getElementById("p4").className+=' selected';
+        }
+        var e = snapshot.child("Jugador5").val();
+        if(e != null){
+            document.getElementById("p5").className+=' selected';
+        }
+        var f = snapshot.child("Jugador6").val();
+        if(f != null){
+            document.getElementById("p6").className+=' selected';
+        }
+        var g = snapshot.child("Jugador7").val();
+        if(g != null){
+            document.getElementById("p7").className+=' selected';
+        }
+        var h = snapshot.child("Jugador8").val();
+        if(h != null){
+            document.getElementById("p8").className+=' selected';
+        }
+        var i = snapshot.child("Jugador9").val();
+        if(i != null){
+            document.getElementById("p9").className+=' selected';
+        }
+        var j = snapshot.child("Jugador10").val();
+        if(j != null){
+            document.getElementById("p10").className+=' selected';
+        }
+        var k = snapshot.child("Jugador11").val();
+        if(k != null){
+            document.getElementById("p11").className+=' selected';
+        }
+        var l = snapshot.child("Jugador12").val();
+        if(l != null){
+            document.getElementById("p12").className+=' selected';
+        }
+        });
+
 }
 
 function aceptar(){
     var id = document.getElementById('claveOculta').innerHTML;
     var usuario = document.getElementById('user').value;
+   
+   
     var ref = firebase.database().ref('Eventos/'+id+'/Jugador');
+<<<<<<< HEAD
     ref.update({
         '' : usuario
+=======
+    ref.once("value")
+      .then(function(snapshot) {
+        var a = snapshot.child("Jugador1").exists();
+        console.log(a);
+        var b = snapshot.child("Jugador2").exists();
+        console.log(b);
+        var c = snapshot.child("Jugador3").exists();
+        var d = snapshot.child("Jugador4").exists();
+        var e = snapshot.child("Jugador5").exists();
+        var f = snapshot.child("Jugador6").exists();
+        var g = snapshot.child("Jugador7").exists();
+        var h = snapshot.child("Jugador8").exists();
+        var i = snapshot.child("Jugador9").exists();
+        var j = snapshot.child("Jugador10").exists();
+        var k = snapshot.child("Jugador11").exists();
+        var l = snapshot.child("Jugador12").exists();
+        if(a == false){
+            var ref1 = firebase.database().ref('Eventos/'+id+'/Jugador');
+            ref1.update({
+                'Jugador1' : usuario
+            });
+
+            var ref = firebase.database().ref('Eventos/'+id);
+   
+            ref.once('value')
+               .then(function(snapshot) {
+                var contador = snapshot.val().Cupos;
+                contador = contador+1;
+                    var ref2 = firebase.database().ref('Eventos/'+id);
+                    ref2.update({
+                        'Cupos' : contador
+                    });
+            });
+
+        }
+        else if(b == false){
+            var ref1 = firebase.database().ref('Eventos/'+id+'/Jugador');
+            ref1.update({
+                'Jugador2' : usuario
+            });
+            var ref = firebase.database().ref('Eventos/'+id);
+   
+            ref.once('value')
+               .then(function(snapshot) {
+                var contador = snapshot.val().Cupos;
+                contador = contador+1;
+                    var ref2 = firebase.database().ref('Eventos/'+id);
+                    ref2.update({
+                        'Cupos' : contador
+                    });
+            });
+        }
+        else if(c == false){
+            var ref1 = firebase.database().ref('Eventos/'+id+'/Jugador');
+            ref1.update({
+                'Jugador3' : usuario
+            });
+            var ref = firebase.database().ref('Eventos/'+id);
+   
+            ref.once('value')
+               .then(function(snapshot) {
+                var contador = snapshot.val().Cupos;
+                contador = contador+1;
+                    var ref2 = firebase.database().ref('Eventos/'+id);
+                    ref2.update({
+                        'Cupos' : contador
+                    });
+            });
+        }
+        else if(d == false){
+            var ref1 = firebase.database().ref('Eventos/'+id+'/Jugador');
+            ref1.update({
+                'Jugador4' : usuario
+            });
+            var ref = firebase.database().ref('Eventos/'+id);
+   
+            ref.once('value')
+               .then(function(snapshot) {
+                var contador = snapshot.val().Cupos;
+                contador = contador+1;
+                    var ref2 = firebase.database().ref('Eventos/'+id);
+                    ref2.update({
+                        'Cupos' : contador
+                    });
+            });
+        }
+        else if(e == false){
+            var ref1 = firebase.database().ref('Eventos/'+id+'/Jugador');
+            ref1.update({
+                'Jugador5' : usuario
+            });
+            var ref = firebase.database().ref('Eventos/'+id);
+   
+            ref.once('value')
+               .then(function(snapshot) {
+                var contador = snapshot.val().Cupos;
+                contador = contador+1;
+                    var ref2 = firebase.database().ref('Eventos/'+id);
+                    ref2.update({
+                        'Cupos' : contador
+                    });
+            });
+        }
+        else if(f == false){
+            var ref1 = firebase.database().ref('Eventos/'+id+'/Jugador');
+            ref1.update({
+                'Jugador6' : usuario
+            });
+            var ref = firebase.database().ref('Eventos/'+id);
+   
+            ref.once('value')
+               .then(function(snapshot) {
+                var contador = snapshot.val().Cupos;
+                contador = contador+1;
+                    var ref2 = firebase.database().ref('Eventos/'+id);
+                    ref2.update({
+                        'Cupos' : contador
+                    });
+            });
+        }
+        else if(g == false){
+            var ref1 = firebase.database().ref('Eventos/'+id+'/Jugador');
+            ref1.update({
+                'Jugador7' : usuario
+            });
+            var ref = firebase.database().ref('Eventos/'+id);
+   
+            ref.once('value')
+               .then(function(snapshot) {
+                var contador = snapshot.val().Cupos;
+                contador = contador+1;
+                    var ref2 = firebase.database().ref('Eventos/'+id);
+                    ref2.update({
+                        'Cupos' : contador
+                    });
+            });
+        }
+        else if(h == false){
+            var ref1 = firebase.database().ref('Eventos/'+id+'/Jugador');
+            ref1.update({
+                'Jugador8' : usuario
+            });
+            var ref = firebase.database().ref('Eventos/'+id);
+   
+            ref.once('value')
+               .then(function(snapshot) {
+                var contador = snapshot.val().Cupos;
+                contador = contador+1;
+                    var ref2 = firebase.database().ref('Eventos/'+id);
+                    ref2.update({
+                        'Cupos' : contador
+                    });
+            });
+        }
+        else if(i == false){
+            var ref1 = firebase.database().ref('Eventos/'+id+'/Jugador');
+            ref1.update({
+                'Jugador9' : usuario
+            });
+            var ref = firebase.database().ref('Eventos/'+id);
+   
+            ref.once('value')
+               .then(function(snapshot) {
+                var contador = snapshot.val().Cupos;
+                contador = contador+1;
+                    var ref2 = firebase.database().ref('Eventos/'+id);
+                    ref2.update({
+                        'Cupos' : contador
+                    });
+            });
+        }
+        else if(j == false){
+            var ref1 = firebase.database().ref('Eventos/'+id+'/Jugador');
+            ref1.update({
+                'Jugador10' : usuario
+            });
+            var ref = firebase.database().ref('Eventos/'+id);
+   
+            ref.once('value')
+               .then(function(snapshot) {
+                var contador = snapshot.val().Cupos;
+                contador = contador+1;
+                    var ref2 = firebase.database().ref('Eventos/'+id);
+                    ref2.update({
+                        'Cupos' : contador
+                    });
+            });
+        }
+        else if(k == false){
+            var ref1 = firebase.database().ref('Eventos/'+id+'/Jugador');
+            ref1.update({
+                'Jugador11' : usuario
+            });
+            var ref = firebase.database().ref('Eventos/'+id);
+   
+            ref.once('value')
+               .then(function(snapshot) {
+                var contador = snapshot.val().Cupos;
+                contador = contador+1;
+                    var ref2 = firebase.database().ref('Eventos/'+id);
+                    ref2.update({
+                        'Cupos' : contador
+                    });
+            });
+        }
+        else if(l == false){
+            var ref1 = firebase.database().ref('Eventos/'+id+'/Jugador');
+            ref1.update({
+                'Jugador12' : usuario
+            });
+            var ref = firebase.database().ref('Eventos/'+id);
+   
+            ref.once('value')
+               .then(function(snapshot) {
+                var contador = snapshot.val().Cupos;
+                contador = contador+1;
+                    var ref2 = firebase.database().ref('Eventos/'+id);
+                    ref2.update({
+                        'Cupos' : contador
+                    });
+            });
+        }
+        else{
+            window.alert("cancha llena");
+        }
     });
+   
     navigate('participarp', 'eventosp')();
+    cardsEventos();
 }

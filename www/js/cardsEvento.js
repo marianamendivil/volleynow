@@ -1,4 +1,5 @@
 function cardsEventos(){
+    
     var query = firebase.database().ref("Eventos").orderByKey();
     query.once("value")
         .then(function(snapshot) {
@@ -13,5 +14,4 @@ function cardsEventos(){
                     "<div class=card><div class=container><h3>Creador:"+childData+"</h3> <h3>Lugar:"+Lugar+"</h3><h3>Fecha:"+Fecha+"</h3><h3>Hora:"+Hora+"</h3> <button class='btn btn-primary' id="+key+" onclick=\"navigate('eventosp','participarp')();participar(this.id)\">Participar</button><h3>Cupos:"+Cupos+"/12</h3></div></div><br>";
             });
         });
-
 }
