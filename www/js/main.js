@@ -46,6 +46,10 @@ function init() {
     var misEventosBackButton = document.getElementById("misEventosBackButton");
     misEventosBackButton.addEventListener('click', navigate('misEventosP','eventosp'));
 
+    var salirBtn = document.getElementById("salirBtn");
+    salirBtn.addEventListener('click', function(){navigate('eventosp', 'initialp')();document.getElementById("user").value = "";
+    document.getElementById("pwd").value = "";});
+
     //FUNCIONALIDAD
 
     var registrarse = document.getElementById("registrarse");
