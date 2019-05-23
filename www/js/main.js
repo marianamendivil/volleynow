@@ -101,11 +101,19 @@ function closeNav() {
 function participar(id1){
     console.log(id1);  
     document.getElementById('claveOculta').innerHTML = id1;
-
+    var ref3 = firebase.database().ref('Eventos/'+id1);
+   
+    ref3.once('value')
+       .then(function(snapshot) {
+        document.getElementById("traerdescrip").innerHTML += snapshot.child("Descripcion").val();
+        
+        });
+    
     var ref = firebase.database().ref('Eventos/'+id1+'/Jugador');
    
     ref.once('value')
        .then(function(snapshot) {
+           
         var a = snapshot.child("Jugador1").val();
         if(a != null){
             document.getElementById("p1").className+=' selected';
