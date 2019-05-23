@@ -5,8 +5,6 @@ function cardsEventos(){
             snapshot.forEach(function(childSnapshot) {
                 var childData = childSnapshot.child("Usuario").val();
               
-
-                
                     var key = childSnapshot.key;
                     var Lugar = childSnapshot.child("Lugar").val();
                     var Fecha = childSnapshot.child("Calendario").val();
