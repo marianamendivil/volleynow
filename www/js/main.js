@@ -108,7 +108,7 @@ function aceptar(){
     var usuario = document.getElementById('user').value;
     var ref = firebase.database().ref('Eventos/'+id+'/Jugador');
     ref.update({
-        ''+ : usuario
+        '' : usuario
     });
     navigate('participarp', 'eventosp')();
 }

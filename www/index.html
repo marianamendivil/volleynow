@@ -18,16 +18,17 @@
     </section>
     
     <section class="login" id="initialp">
+        <h1 id="inicioSesion">Iniciar sesión</h1>
             <label>usuario</label>
             <input type="text" class="form-control" id="user">
             <label>contraseña:</label>
             <input type="password" class="form-control" id="pwd">
             <button class="btn btn-primary" id=entrar>Entrar</button>
-            <button class="btn btn-primary" id="registroButton">Registrarse</button>
+            <button class="btn btn-secondary" id="registroButton">Registrarse</button>
     </section>
 
     <section class="registro" id="registrop">
-            <label>Registro</label>
+            <h1 id="registroTitle">Registro</h1>
             
             <label>Nombre</label>
             <input  class="form-control" id="Nombre">
@@ -52,14 +53,14 @@
                 <label class="radio-inline" ><input type="radio" name="PosicionF" value="1">Posicion 1</label>
             </div>
 
-            <label>Nombre de Usuario</label>
+            <label>Nombre de Usuario (Alias)</label>
             <input  class="form-control" id="Usuario">
 
             <label>Contraseña</label>
             <input  class="form-control" id="Contraseña">
     
-            <button class="btn btn-primary" id="registrarse">Registrar</button>
-            <button class="btn btn-primary" id="registroBackButton">Iniciar sesion</button>
+            <button class="btn btn-primary" id="registrarse">Registrarse</button>
+            <button class="btn btn-secondary" id="registroBackButton">Iniciar sesion</button>
     </section>
     <section class="eventos" id="eventosp">
         <h1>Eventos</h1>
@@ -80,11 +81,11 @@
     </section>
   
     <section class="crearEvento" id="nuevoEvento">
-        <button id="crearEventoBackButton">Back</button>
-            <label>Crear Evento</label>
+        <div class="back" id="crearEventoBackButton"></div>
+            <h1 id="crearEventoTitle" >Crear Evento</h1>
             
-            <label>Hora</label>
-            <input  type="time" id="Hora">
+            <label>Hora</label><br>
+            <input  type="time" id="Hora"><br>
            
             <label>Fecha</label> <br>
             <input  type="date" id="Calendario">
@@ -108,8 +109,8 @@
 
     <section class="perfil" id="perfilp">
         
-        <button id="perfilBackButton">Back</button>
-        <div class="card" style="width:400px">
+        <div class="back" id="perfilBackButton"></div>
+        <div class="card" style="width:100%">
             <img class="card-img-top" src="img/img_avatar3.png" alt="Card image" style="width:100%">
             
             <div class="card-body">
@@ -129,12 +130,12 @@
     </section>
 
     <section class="misEventos" id="misEventosP">
-        <button id="misEventosBackButton">Back</button>
+        <div class="back" id="misEventosBackButton"></div>
         <div id="adminEventosp"></div>
     </section>
 
     <section class="participar" id="participarp">
-        <button id="participarBackButton">Back</button>
+        <div class="back" id="participarBackButton"></div>
         <lable id="claveOculta"></lable>
         <h2>Descripción</h2>
         <h2>Posición cancha</h2>
@@ -152,7 +153,7 @@
             <div class="punto" id="p11" onclick="puntoPressed('p11')"></div>
             <div class="punto" id="p12" onclick="puntoPressed('p12')"></div>
         </div>
-        <button class="btn btn-primary" onclick="aceptar()">Aceptar</button>
+        <button class="btn btn-primary" id="btnAceptar" onclick="aceptar()">Aceptar</button>
     </section>
 
 <!--//////////////////////////////////////////////////////////////////////////////////////////-->

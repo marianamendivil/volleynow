@@ -17,8 +17,46 @@ section {
     text-align: center;
 }
 
+.back {
+  background-image: url(../img/back.png);
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 10%;
+  width: 20%;
+  margin: 1.5%;
+}
+
+#inicioSesion {
+  margin-top: 20%;
+  margin-bottom: 20%;
+}
+
+#registroTitle {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+#user {
+  margin-bottom: 10%;
+}
+
+#pwd {
+  margin-bottom: 10%;
+}
+
+#crearEventoTitle {
+  margin-top: 0;
+}
+
+#crearEvento {
+  margin-top: 5%;
+}
+
 .phoneload {
 	background-image: url("../img/splash.gif");
+  background-size: contain;
+  background-color: skyblue;
 }
 
 .login {
@@ -33,6 +71,25 @@ section {
 	background-size: cover;
 }
 
+#registrarse {
+  margin-top: 10%;
+  width: 30%;
+  margin-left: 35%;
+  margin-right: 35%;
+  margin-bottom: 4%;
+}
+
+.btn-primary {
+  position: relative;
+}
+
+#entrar {
+  width: 30%;
+  margin-left: 35%;
+  margin-right: 35%;
+  margin-bottom: 10%;
+}
+
 #claveOculta {
   display: none;
 }
@@ -45,7 +102,12 @@ section {
   height: 80vh;
   width: 100%;
   max-width: 100%;  
-  position: relative;  
+  position: relative; 
+  margin-bottom: 5%; 
+}
+
+#btnAceptar {
+  margin-bottom: 6%; 
 }
 
 .punto {
