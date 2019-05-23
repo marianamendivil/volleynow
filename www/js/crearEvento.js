@@ -18,10 +18,9 @@ function crearevento(){
         Lugar :  Lugar,
         Hora : Hora,
         Calendario : Calendario,
-        Cupos : "12",
+        Cupos : 0,
         Descripcion :  Descripcion,
-        Puntualidad : Puntualidad,
-        Jugador: {Jugador1 : "" , Jugador2 : "",Jugador3:"",Jugador4:"",Jugador5:"",Jugador6:"",Jugador7 : "" , Jugador8 : "",Jugador9:"",Jugador10:"",Jugador11:"",Jugador12:""} 
+        Puntualidad : Puntualidad
         });
         navigate('nuevoEvento','eventosp')();   
         
