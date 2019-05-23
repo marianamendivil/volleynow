@@ -13,9 +13,7 @@ function cardsEventos(){
                     var Hora = childSnapshot.child("Hora").val();
                     var Cupos = childSnapshot.child("Cupos").val();
                     document.getElementById("cardeventop").innerHTML+=
-                    "<div class=container><h2>Creador:"+childData+"</h2> <h2>Lugar:"+Lugar+"</h2><h2>Fecha:"+Fecha+"</h2><h2>Hora:"+Hora+"</h2> <button class='btn btn-primary' id="+key+">Participar</button><h2>Cupos:"+Cupos+"/12</h2>";
-              
-                
+                    "<div class=card><div class=container><h2>Creador:"+childData+"</h2> <h2>Lugar:"+Lugar+"</h2><h2>Fecha:"+Fecha+"</h2><h2>Hora:"+Hora+"</h2> <button class='btn btn-primary' id="+key+">Participar</button><h2>Cupos:"+Cupos+"/12</h2></div></div>";
             });
         });
 

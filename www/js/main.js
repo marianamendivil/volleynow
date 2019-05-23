@@ -22,6 +22,9 @@ function init() {
         crearevento();
     });
 
+    var crearEventoBackButton = document.getElementById("crearEventoBackButton");
+    crearEventoBackButton.addEventListener('click', navigate('nuevoEvento', 'eventosp'));
+
     var registroBackButton = document.getElementById("registroBackButton");
     registroBackButton.addEventListener('click', navigate('registrop', 'initialp'));
 
