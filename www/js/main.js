@@ -25,6 +25,9 @@ function init() {
     var crearEventoBackButton = document.getElementById("crearEventoBackButton");
     crearEventoBackButton.addEventListener('click', navigate('nuevoEvento', 'eventosp'));
 
+    var participarBackButton = document.getElementById("participarBackButton");
+    participarBackButton.addEventListener('click', navigate('participarp', 'eventosp'));
+
     var registroBackButton = document.getElementById("registroBackButton");
     registroBackButton.addEventListener('click', navigate('registrop', 'initialp'));
 
@@ -83,4 +86,29 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("main").style.marginLeft = "0";
+}
+
+function puntoPressed(id) {
+    var elemento = document.getElementById(id);
+    if (elemento.className.split(' ').length < 2) {
+        elemento.className+=' selected';
+    }
+    else {
+        elemento.className = 'punto';
+    }
+}
+
+function participar(id1){
+    console.log(id1);  
+    document.getElementById('claveOculta').innerHTML = id1;  
+}
+
+function aceptar(){
+    var id = document.getElementById('claveOculta').innerHTML;
+    var usuario = document.getElementById('user').value;
+    var ref = firebase.database().ref('Eventos/'+id+'/Jugador');
+    ref.update({
+        ''+ : usuario
+    });
+    navigate('participarp', 'eventosp')();
 }

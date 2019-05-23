@@ -33,6 +33,94 @@ section {
 	background-size: cover;
 }
 
+#claveOculta {
+  display: none;
+}
+
+#cancha {
+  background-image: url("../img/cancha.png");
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 80vh;
+  width: 100%;
+  max-width: 100%;  
+  position: relative;  
+}
+
+.punto {
+  background-image: url("../img/punto.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 10%;
+  width: 15%;
+  position: absolute;
+}
+
+.selected {
+  filter: opacity(0.5);
+}
+
+#p1 {
+  top: 20%;
+  left: 25%;
+}
+
+#p2 {
+  top: 20%;
+  left: 42%;
+}
+
+#p3 {
+  top: 20%;
+  left: 60%;
+}
+
+#p4 {
+  top: 38%;
+  left: 25%;
+}
+
+#p5 {
+  top: 38%;
+  left: 42%;
+}
+
+#p6 {
+  top: 38%;
+  left: 60%;
+}
+
+#p7 {
+  top: 52%;
+  left: 60%;
+}
+
+#p8 {
+  top: 52%;
+  left: 42%;
+}
+
+#p9 {
+  top: 52%;
+  left: 25%;
+}
+
+#p10 {
+  top: 70%;
+  left: 60%;
+}
+
+#p11 {
+  top: 70%;
+  left: 42%;
+}
+
+#p12 {
+  top: 70%;
+  left: 25%;
+}
+
 /* The sidebar menu */
 .sidebar {
   height: 100%; /* 100% Full-height */
